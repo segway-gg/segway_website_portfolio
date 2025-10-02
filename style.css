@@ -1,0 +1,626 @@
+/* ===== 共通設定 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* ===== コンテナ ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== ヘッダー ===== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005fa3; /* 少し濃い青に変更 */
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header nav a.cta {
+    background-color: #007acc;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a.cta:hover {
+    background-color: #005fa3;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+    background-color: #e6f2ff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    display: inline-block;
+    background-color: #007acc;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.hero .cta:hover {
+    background-color: #005fa3;
+}
+
+/* ===== サービス紹介 ===== */
+.services {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007acc;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f4f4f4;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #007acc;
+}
+
+.service-card p {
+    color: #555;
+}
+
+/* ===== 会社情報 ===== */
+.company {
+    background-color: #f0f8ff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.company h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.company p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== フッター ===== */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* ハンバーガー非表示（PC） */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        display: none; /* 初期非表示 */
+        flex-direction: column; /* 縦並びにする */
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #nav-menu.open {
+        display: flex; /* open クラスで表示 */
+        flex-direction: column; /* 縦方向に出す */
+    }
+
+    .menu-toggle {
+        display: block; /* ハンバーガー表示 */
+    }
+
+    header nav a {
+        margin: 8px 0; /* リンク間隔を縦方向に調整 */
+    }
+}
+
+
+
+/* ===== フォーム全体 ===== */
+.contact-form {
+  background: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0073e6;
+}
+
+.contact-form .form-lead {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #005bb5;
+}
+
+
+/* サンクスページ */
+#thanks {
+    background-color: #e6f2ff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#thanks h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+#thanks p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#thanks a {
+    display: inline-block;
+    background-color: #007acc;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+#thanks a:hover {
+    background-color: #005fa3;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #ffffff; /* 少し濃いめにしてもOK */
+}
+
+
+/* ===== スライダー ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 60vh;/* 高さを画面の60%に */
+  object-fit: cover; /* 縦横比を保ちながらトリミング */
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* ボタン */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/* ポートフォリオセクション */
+#portfolio {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-item .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.portfolio-item .btn:hover {
+  background: #005fa3;
+}
+
+
+/* カードデザイン */
+.pricing {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card .price {
+  font-size: 1.5em;
+  margin: 20px 0;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-card li {
+  margin: 10px 0;
+}
+
+.pricing-card .cta {
+  display: inline-block;
+  background: #0077cc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.pricing-card .cta:hover {
+  background: #005fa3;
+}
+
+/* スタンダードプラン強調 */
+.pricing-card.highlight {
+  border: 2px solid #0077cc;
+  transform: scale(1.05);
+}
+
+
+/* お客様の声 */
+.testimonials {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 280px;
+  flex: 1 1 250px;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card .comment {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-card .author span {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+}
+
+
+/* FAQ */
+.faq {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+  padding: 20px;
+  border-left: 4px solid #0073e6;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.faq-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #555;
+}
+
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #0073e6, #005bb5);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin: 60px auto;
+}
+
+.cta-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #0073e6;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #f2f2f2;
+  transform: translateY(-3px);
+}
+
+
