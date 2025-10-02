@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Tech Solutions</div>
+            <!-- ハンバーガーボタン -->
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
+            <nav id="nav-menu">
+                <a href="#">Home</a>
+                <a href="#services">サービス</a>
+                <a href="#company">会社情報</a>
+                <a href="contact.html" class="cta">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインビジュアル（ヒーロー） -->
+    <section class="hero">
+        <div class="container">
+            <h1>私たちはあなたのビジネスを加速させます</h1>
+            <p>Web開発・自動化ツール開発をワンストップで提供</p>
+            <a href="contact.html" class="cta">無料相談はこちら</a>
+        </div>
+    </section>
+
+    <!-- サービス紹介 -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>サービス紹介</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Web制作</h3>
+                    <p>魅力的なWebサイトを作成します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>自動化ツール開発</h3>
+                    <p>作業効率を上げるツールを提供します。</p>
+                </div>
+                <div class="service-card">
+                    <h3>デザインコンサル</h3>
+                    <p>見た目も戦略も両立したデザイン提案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社情報 -->
+    <section class="company" id="company">
+        <div class="container">
+            <h2>会社情報</h2>
+            <p>Tech Solutionsは、Web制作・自動化ツール開発を通じて企業の業務効率とデザイン力向上をサポートします。</p>
+        </div>
+    </section>
+
+    <!-- スライダー -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/picture1.jpg" alt="実績1">
+                <div class="caption">Web制作の実績</div>
+            </div>
+
+            <div class="slide">
+                <img src="img/picture2.png" alt="実績2">
+                <div class="caption">自動化ツール導入事例</div>
+            </div>
+            
+            <div class="slide">
+                <img src="img/profile.jpg" alt="実績3">
+                <div class="caption">デザイン改善プロジェクト</div>
+            </div>
+        </div>
+        <!-- 操作ボタン -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <!-- 実績・ポートフォリオ -->
+    <section id="portfolio">
+    <h2>実績・ポートフォリオ</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <img src="images/work1.jpg" alt="制作物1">
+            <h3>Webサイト制作</h3>
+            <p>レスポンシブ対応の企業サイトを制作しました。</p>
+            <a href="https://example.com/work1" target="_blank" class="btn">詳しく見る</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/work2.jpg" alt="制作物2">
+            <h3>アプリ開発</h3>
+            <p>Reactを使ったタスク管理アプリです。</p>
+            <a href="https://example.com/work2" target="_blank" class="btn">詳しく見る</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/work3.jpg" alt="制作物3">
+            <h3>デザイン作品</h3>
+            <p>ロゴ・バナーデザインの制作事例です。</p>
+            <a href="https://example.com/work3" target="_blank" class="btn">詳しく見る</a>
+        </div>
+    </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2>お客様の声</h2>
+        <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <p class="comment">"丁寧に対応していただき、想像以上のWebサイトを作っていただけました！"</p>
+            <p class="author">株式会社ABC<br><span>代表取締役 山田太郎</span></p>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="comment">"自動化ツールのおかげで作業時間が半分以下になり、大変助かっています。"</p>
+            <p class="author">有限会社XYZ<br><span>システム担当 佐藤花子</span></p>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="comment">"デザイン提案がとても分かりやすく、ブランディング強化につながりました。"</p>
+            <p class="author">フリーランス<br><span>デザイナー 鈴木一郎</span></p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- 料金プラン -->
+    <section class="pricing" id="pricing">
+    <div class="container">
+        <h2>料金プラン</h2>
+        <div class="pricing-cards">
+        <div class="pricing-card">
+            <h3>ライトプラン</h3>
+            <p class="price">¥50,000〜</p>
+            <ul>
+            <li>小規模Webサイト</li>
+            <li>基本デザイン</li>
+            <li>メールサポート</li>
+            </ul>
+            <a href="contact.html" class="cta">お問い合わせ</a>
+        </div>
+
+        <div class="pricing-card highlight">
+            <h3>スタンダードプラン</h3>
+            <p class="price">¥100,000〜</p>
+            <ul>
+            <li>中規模Webサイト</li>
+            <li>デザイン＋SEO対策</li>
+            <li>チャットサポート</li>
+            </ul>
+            <a href="contact.html" class="cta">お問い合わせ</a>
+        </div>
+
+        <div class="pricing-card">
+            <h3>プレミアムプラン</h3>
+            <p class="price">¥200,000〜</p>
+            <ul>
+            <li>大規模Webサイト</li>
+            <li>フルカスタムデザイン</li>
+            <li>専任担当サポート</li>
+            </ul>
+            <a href="contact.html" class="cta">お問い合わせ</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+    <div class="container">
+        <h2>よくある質問</h2>
+        <div class="faq-list">
+        <div class="faq-item">
+            <h3>Q. サイト制作にはどのくらいの期間がかかりますか？</h3>
+            <p>A. 内容や規模にもよりますが、一般的には2〜4週間程度です。</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q. デザインの修正はできますか？</h3>
+            <p>A. はい、基本プラン内で2回まで修正対応いたします。</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q. 契約前に相談は可能ですか？</h3>
+            <p>A. もちろんです。お問い合わせフォームから無料相談をご利用ください。</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+    <div class="container">
+        <h2>まずはお気軽にご相談ください</h2>
+        <p>Web制作や自動化ツール開発について、無料でご相談いただけます。</p>
+        <a href="contact.html" class="cta-btn">無料相談はこちら</a>
+    </div>
+    </section>
+
+
+
+
+
+    <!-- フッター -->
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2025 Tech Solutions. All rights reserved.</p>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#services">サービス</a>
+                <a href="#company">会社情報</a>
+                <a href="contact.html">お問い合わせ</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function(){
+            const nav = document.getElementById("nav-menu");
+            nav.classList.toggle("open"); // openクラスを切替
+        });
+    </script>
+
+    <script>
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + slides.length) % slides.length;
+            document.querySelector('.slides').style.transform = 
+            `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+
+        // 自動スライド
+        setInterval(() => {
+            showSlide(index + 1);
+        }, 5000);
+    </script>
+
+
+
+
+
+</body>
+</html>
